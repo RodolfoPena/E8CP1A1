@@ -20,14 +20,16 @@ def count_similar_word(filename, word)
   file = File.open(filename, 'r')
   data = file.readlines
   file.close
-  text = data.join.downcase
-  words = text.split(word.downcase).length - 1
+  text = data.join.downcase.delete('.')
+  words = text.split
+  matches = words.select { |element| element == word }
+  frequency = matches.length
   if words == 1
-    puts "La palaraba #{word} se repite #{words} vez"
+    puts "La palaraba #{word} se repite #{frequency} vez"
   else
-    puts "La palaraba #{word} se repite #{words} veces"
+    puts "La palaraba #{word} se repite #{frequency} veces"
   end
 end
 
 puts ""
-count_similar_word(filename, 'imperio')
+count_similar_word(filename, "galaxias")

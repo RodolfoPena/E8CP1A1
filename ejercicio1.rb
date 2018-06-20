@@ -16,10 +16,11 @@ y = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod te
 create_paragraph(x, y)
 
 def create_list(array)
+  if
   file = File.open('./E8CP1A1/index.html', 'a')
-  file.puts '<ul>'
+  file.puts '<ol>'
   array.each{ |element| file.puts "\t <li> #{element} </li>"}
-  file.puts '</ul>'
+  file.puts '</ol>'
   file.close
 end
 
